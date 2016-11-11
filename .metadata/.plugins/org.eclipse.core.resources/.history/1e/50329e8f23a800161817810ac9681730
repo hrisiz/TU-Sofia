@@ -1,0 +1,14 @@
+
+public class Main {
+	public static void main(String[] args) {
+		try {
+			Users users = new Users();
+			users.LoadUsers();
+//			FileSystem fileSystem = new FileSystem("DB/users.bin");
+//			fileSystem.addUser(user);
+//			fileSystem.getAllUsers();
+		} catch (UserException e) {
+			e.printStackTrace();
+		}
+	}
+}

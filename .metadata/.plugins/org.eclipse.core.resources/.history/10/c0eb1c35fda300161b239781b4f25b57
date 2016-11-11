@@ -1,0 +1,34 @@
+package secondtry;
+import java.util.ArrayList;
+import java.util.List;
+
+public class RegexMatcher {
+	private List<List<Character>> regex;
+	private List<RegEx> regex_type; 
+	/* Regular expression search types
+	 * 0 - Start regex
+	 * 1 - + 0 or more unknown count
+	 * 2 - * Unknown count
+	 * 3 - Forbidden regex
+	 */
+	
+	private void addToRegexType(int index, int value){
+		try {
+			regex_type.get(index).addType(value);
+		} catch ( IndexOutOfBoundsException e ) {
+			regex_type.add(new RegEx(value));
+		}
+	}
+	
+	public RegexMatcher(String pattern) throws RegExException {
+		regex = new ArrayList<List<Character>>();
+		regex_type = new ArrayList<RegEx>();
+		for(int string_counter = 0; string_counter < pattern.length(); string_counter++){
+			char current_char = pattern.charAt(string_counter);
+		}
+	}
+	
+	public boolean match(String input){
+	
+	}
+}

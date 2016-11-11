@@ -1,0 +1,7 @@
+package secondtry;
+
+public interface RegExType {
+	
+	public boolean check();
+	
+}

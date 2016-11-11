@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Users users = new Users();
+		users.LoadUsers();
+		
+		Scanner scan = new Scanner(System.in);
+		
+		while((line = scan.nextLine()) != null){
+			
+		}
+		
+		System.out.println(users);
+		users.SafeUsers();
+		
+	}
+}

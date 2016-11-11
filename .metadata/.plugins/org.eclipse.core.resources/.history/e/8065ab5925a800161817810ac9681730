@@ -1,0 +1,18 @@
+
+public class Main {
+	public static void main(String[] args) {
+		Users users = new Users();
+		users.LoadUsers();
+		try {
+			users.addUser(new User("user1","goodpassword1"));
+			users.addUser(new User("user2","passowrd"));
+			users.addUser(new User("user3","hrisiz"));
+			users.addUser(new User("user4","1234567"));
+		} catch (UserException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(users);
+		users.SafeUsers();
+	}
+}

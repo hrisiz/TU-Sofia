@@ -1,0 +1,12 @@
+
+public class Main {
+	public static void main(String[] args) {
+		Users users = new Users();
+		users.LoadUsers();
+		
+		
+		
+		System.out.println(users);
+		users.SafeUsers();
+	}
+}

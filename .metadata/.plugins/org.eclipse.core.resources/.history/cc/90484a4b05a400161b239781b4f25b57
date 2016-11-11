@@ -1,0 +1,65 @@
+package secondtry;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class RegEx {
+	List<Character> regexChars;
+	private int type;
+	private Integer minCount;
+	private Integer maxCount;
+	
+	public RegEx(int type) {
+		this.regexChars = new ArrayList<Character>();
+		this.type = type;
+		this.minCount = null;
+		this.maxCount = null;
+	}
+	
+	public RegEx(int type, int minCount, int maxCount) {
+		this.regexChars = new ArrayList<Character>();
+		this.type = type;
+		this.minCount = minCount;
+		this.maxCount = maxCount;
+	}
+	
+	public RegEx(RegEx old) {
+		this.type = old.getType();
+		this.minCount = old.getMinCount();
+		this.maxCount = old.getMaxCount();
+	}
+	
+	public void addCharacter(char ch){
+		this.regexChars.add(ch);
+	}
+	
+	public List<Character> getCharacters(){
+		return this.regexChars;
+	}
+	
+	public void setMinCount(int minCount) {
+		this.minCount = minCount;
+	}
+	
+	public void setMaxCount(int maxCount) {
+		this.maxCount = maxCount;
+	}
+	
+	public int getMaxCount() {
+		return maxCount;
+
+	}
+	
+	public int getMinCount() {
+		return minCount;
+	}
+	
+	public int getType() {
+		return type;
+	}
+	
+	public void addType(double type){
+		this.type += type;
+	}
+	
+}

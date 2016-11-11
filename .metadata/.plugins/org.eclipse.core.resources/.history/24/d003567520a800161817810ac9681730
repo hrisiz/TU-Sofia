@@ -1,0 +1,38 @@
+import java.io.Serializable;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class User implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -231609387047971768L;
+	private int id;
+	private String username;
+	private static final String userRegEx = "[a-zA-Z][a-zA-Z1-9_-]{5,19}";
+	private String password;
+	private static final String passRegEx = "[a-zA-Z1-9_-]{6,20}";
+	
+	private boolean check(String str,String regex){
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(str);
+		return matcher.matches();
+	}
+	
+	public User(int id,String name,String password) throws UserException {
+		if(!this.check(name,userRegEx)){
+			throw new UserException("Wrong UserName");
+		}
+		if(!this.check(password,passRegEx)){
+			throw new UserException("Wrong Password");
+		}
+		this.id = id;
+		this.username = name;
+		this.password = password;
+	}
+	
+	@Override
+	public String toString(){
+		return this.username + " " + this.password;
+	}
+}

@@ -1,0 +1,51 @@
+package secondtry;
+import java.util.ArrayList;
+import java.util.List;
+
+public class RegexMatcher {
+	private List<RegEx> regex;
+	/* Regular expression search types
+	 * 0 - Start regex
+	 * 1 - + 0 or more unknown count
+	 * 2 - * Unknown count
+	 * 3 - Forbidden regex
+	 */
+	
+	
+	public RegexMatcher(String pattern) throws RegExException {
+		regex = new ArrayList<RegEx>();
+		int regex_counter = 0;
+		boolean is_collection = false;
+		for(int string_counter = 0; string_counter < pattern.length(); string_counter++){
+			char current_char = pattern.charAt(string_counter);
+			switch(current_char){
+				case '[':
+					regex.add(new RegEx(RegExSearchTypes.NORMAL.getCode()));
+					is_collection = true;
+					break;
+				case ']':
+					regex_counter++;
+					break;
+				default:
+					if(regex_counter >= regex.size()){
+						regex.add(new RegEx(RegExSearchTypes.NORMAL.getCode()));
+					}
+					regex.get(regex_counter).addCharacter(current_char);
+					if(!is_collection){
+						regex_counter++;
+					}
+					break;
+			}
+		}
+		for (RegEx regEx : regex) {
+			for (Character ch : regEx.getCharacters()){
+				System.out.print(ch +" ");
+			}
+			System.out.println(";");
+		}
+	}
+	
+	public boolean match(String input){
+		return true;
+	}
+}
