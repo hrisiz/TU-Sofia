@@ -19,10 +19,9 @@ public class FileSystem {
 			return new ArrayList<User>();
 		}
 		List<User> users = new ArrayList<User>();
-		ObjectInputStream ois = null;
 		try {
 			FileInputStream fin = new FileInputStream(usersFile);
-			ois = new ObjectInputStream(fin);
+			ObjectInputStream ois = new ObjectInputStream(fin);
 			User readUser;
 			while(true){
 				try {
@@ -34,43 +33,30 @@ public class FileSystem {
 					e.printStackTrace();
 				}
 			}
+			ois.close();
 		} catch (EOFException e) {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally{
-			try {
-				ois.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 		return users;
 	}
 	
 	public static void SafeUsers(List<User> users){
-		ObjectOutputStream oos = null;
 		try {
 			FileOutputStream fout = new FileOutputStream(usersFile);
-			oos = new ObjectOutputStream(fout);
+			ObjectOutputStream oos = new ObjectOutputStream(fout);
 			for (User user : users) {
 				oos.writeObject(user);
 			}
+			oos.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally{
-			try {
-				oos.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 	}
 	
 	public static boolean LogIn(User user){
-		ObjectInputStream ois = null;
+		ObjectInputStream ois;
 		try {
 			FileInputStream fin = new FileInputStream(usersFile);
 			ois = new ObjectInputStream(fin);
@@ -82,7 +68,7 @@ public class FileSystem {
 						Date date = new Date();
 						PrintWriter dateFin = new PrintWriter(usersLogFile);
 						dateFin.println(user+"\t"+date);
-						dateFin.close(); //where to close?
+						dateFin.close();
 						return true;
 					}
 				} catch (EOFException e) {
@@ -96,12 +82,7 @@ public class FileSystem {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally{
-			try {
-				ois.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			ois.close();
 		}
 		return false;
 	}

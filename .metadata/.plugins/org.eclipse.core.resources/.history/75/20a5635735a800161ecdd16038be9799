@@ -19,7 +19,7 @@ public class FileSystem {
 			return new ArrayList<User>();
 		}
 		List<User> users = new ArrayList<User>();
-		ObjectInputStream ois = null;
+		ObjectInputStream ois;
 		try {
 			FileInputStream fin = new FileInputStream(usersFile);
 			ois = new ObjectInputStream(fin);
@@ -82,7 +82,7 @@ public class FileSystem {
 						Date date = new Date();
 						PrintWriter dateFin = new PrintWriter(usersLogFile);
 						dateFin.println(user+"\t"+date);
-						dateFin.close(); //where to close?
+						dateFin.close();
 						return true;
 					}
 				} catch (EOFException e) {

@@ -39,8 +39,7 @@ public class Main {
 				e.printStackTrace();
 			}
 		}
-		//LogIn
-		
+		//LogIN
 		
 	}
 }

@@ -82,7 +82,7 @@ public class FileSystem {
 						Date date = new Date();
 						PrintWriter dateFin = new PrintWriter(usersLogFile);
 						dateFin.println(user+"\t"+date);
-						dateFin.close(); //where to close?
+						dateFin.close();
 						return true;
 					}
 				} catch (EOFException e) {
