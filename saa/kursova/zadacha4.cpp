@@ -1,27 +1,40 @@
 #include<iostream>
-#include<vector>
 
 using namespace std;
-
+#define ARRAY_SIZE 10
 int main(){
-	vector<int> array;
-	while(true){
-		int tmp;
-		cout << "\nnumber " << array.size() << ": ";
-		cin >> tmp;
+	int array[ARRAY_SIZE];
+	for(int i = 0; i < ARRAY_SIZE; i++){
+		cout << "number " << (i+1) << ": ";
+		cin >> array[i];
 		if(cin.eof()){
 			break;
 		}
-		array.push_back(tmp);
 	}
 	cout << endl;
-	for(int i = 1; i < array.size();i+=2){
-		if(array.at(i-1) > array.at(i) ||
-		   array.at(i) < array.at(i+1)){
+	for(int i = 1; i < ARRAY_SIZE; i+=2){
+		if(array[i-1] >= array[i] ||
+		   (i+1 < ARRAY_SIZE && array[i] <= array[i+1])){
 			cout << "false";
 			return 0;
 		}
 	}
 	cout << "true";
-	return 1;
+	return 0;
 }
+
+/*
+-1
+1
+-1
+1
+-1
+1
+-1
+1
+-1
+1
+-1
+1
+
+*/
