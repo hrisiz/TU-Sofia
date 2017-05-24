@@ -8,7 +8,7 @@ begin
 	declare finished int;
 	declare current_name varchar(255);
 	declare the_cursor CURSOR for
-	Select Persons.name From persons_locations Join Persons on Persons.id=persons_locations.person_id;
+	Select distinct Persons.name From persons_locations Join Persons on Persons.id=persons_locations.person_id;
 	
 	
 	declare continue handler FOR NOT FOUND set finished = 1;

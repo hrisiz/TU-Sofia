@@ -62,40 +62,37 @@ CREATE TABLE persons_locations_with(
 
 
 
-Insert Into Persons values(NULL,'Gosho','46453198',NULL,'hrerowe@grpiw.ngre','0864685210','1','Ca07763KS','47','L');
-Insert Into Persons values(NULL,'Pesho','46423199',NULL,'gree@grpiw.ngre','0864685211','1','Ca07163KS','47','L');
-Insert Into Persons values(NULL,'Tinka','46433197',NULL,'wfv@grpiw.ngre','0864685212','1','Ca07743KS','47','T');
-Insert Into Persons values(NULL,'Geri','54453196',NULL,'greerht54@grpiw.ngre','0864385210','1','CO07453KS','47','M');
-Insert Into Persons values(NULL,'Desi','95453194',NULL,'5yr@grpiw.ngre','0864685216','1','Ca07763MS','47','M');
-Insert Into Persons values(NULL,'Valq','56453193',NULL,'4ht@grpiw.ngre','0864685218','1','Ca07763LS','47','S');
-Insert Into Persons values(NULL,'Krisi','01453192',NULL,'gehn@grpiw.ngre','0864685910','1','Ca07763QS','47','S');
+Insert Into Persons values(NULL, 'Gosho', '46453198', NULL, 'hrerowe@grpiw.ngre', '0864685210', '1', 'Ca07763KS', '47', 'L');
+Insert Into Persons values(NULL, 'Pesho', '46423199', NULL, 'gree@grpiw.ngre', '0864685211', '1', 'Ca07163KS', '47', 'L');
+Insert Into Persons values(NULL, 'Petka', '46433197', NULL, 'wfv@grpiw.ngre', '0864685212', '1', 'Ca07743KS', '47', 'T');
+Insert Into Persons values(NULL, 'Kolio', '54453196', NULL, 'greerht54@grpiw.ngre', '0864385210', '1', 'CO07453KS', '47', 'M');
+Insert Into Persons values(NULL, 'Ivan', '95453194', NULL, '5yr@grpiw.ngre', '0864685216', '1', 'Ca07763MS', '47', 'M');
+Insert Into Persons values(NULL, 'Maria', '56453193', NULL, '4ht@grpiw.ngre', '0864685218', '1', 'Ca07763LS', '47', 'S');
+Insert Into Persons values(NULL, 'Ivanka', '01453192', NULL, 'gehn@grpiw.ngre', '0864685910', '1', 'Ca07763QS', '47', 'S');
 
-Insert Into Countries values(NULL,'Bulgaria');
-Insert Into Countries values(NULL,'Russia');
-Insert Into Countries values(NULL,'Germany');
+Insert Into Countries values(NULL, 'Bulgaria');
+Insert Into Countries values(NULL, 'Russia');
+Insert Into Countries values(NULL, 'Germany');
 
-Insert Into Cities values(NULL,'Sofia');
-Insert Into Cities values(NULL,'Plovdiv');
-Insert Into Cities values(NULL,'Varna');
+Insert Into Cities values(NULL, 'Sofia');
+Insert Into Cities values(NULL, 'Plovdiv');
+Insert Into Cities values(NULL, 'Varna');
 
-Insert Into Addresses values(NULL,1,1,'greghjebgreo');
-Insert Into Addresses values(NULL,1,2,'hgrtrbgreo');
-Insert Into Addresses values(NULL,1,3,'ebgreo');
+Insert Into Addresses values(NULL, 1, 1, 'greghjebgreo');
+Insert Into Addresses values(NULL, 1, 2, 'hgrtrbgreo');
+Insert Into Addresses values(NULL, 1, 3, 'ebgreo');
 
-Insert Into Locations values(NULL,1,'50,2000 -20.6545','bar');
-Insert Into Locations values(NULL,1,'20,5400 -10.6545','club');
-Insert Into Locations values(NULL,1,'30,1000 -80.6545','sport');
+Insert Into Locations values(NULL, 1, '50, 2000 -20.6545', 'bar');
+Insert Into Locations values(NULL, 1, '20, 5400 -10.6545', 'club');
+Insert Into Locations values(NULL, 1, '30, 1000 -80.6545', 'sport');
 
-Insert Into persons_locations values(NULL,1,1,'2:12:50');
-Insert Into persons_locations values(NULL,1,2,'4:25:00');
-Insert Into persons_locations values(NULL,1,3,'1:55:40');
+Insert Into persons_locations values(NULL, 1, 1, '2:12:50');
+Insert Into persons_locations values(NULL, 1, 2, '4:25:00');
+Insert Into persons_locations values(NULL, 1, 3, '1:55:40');
 
-Insert Into persons_locations_with values(1,2);
-Insert Into persons_locations_with values(1,3);
-Insert Into persons_locations_with values(1,4);
-
-
-
+Insert Into persons_locations_with values(1, 2);
+Insert Into persons_locations_with values(1, 3);
+Insert Into persons_locations_with values(1, 4);
 
 
 
