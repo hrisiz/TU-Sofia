@@ -1,0 +1,10 @@
+
+public enum UserType {
+	Student(0),
+	Secretary(1)
+	
+	private int rights;
+	public UserType(int rights){
+		this.rights = rights;
+	}
+}

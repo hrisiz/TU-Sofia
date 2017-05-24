@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class Secretary extends Thread{
+	private Socket socket;
+	public Secretary(Socket scoket) {
+		this.socket = socket;
+	}
+	public synchronized Document getDocument(){
+		return Server.documents.removeFirst(); // взимам и изтривам първия елемент от листа
+	}
+	public synchronized void addDocument(Document doc){
+		Server.acceptedDocuments.add(doc); // взимам и изтривам първия елемент от листа
+	}
+	@Override
+	public void run() {
+		try {
+			ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream()); // отварям стреам 
+			Document doc = this.getDocument(); // взимам първия елемент и го записвам в doc
+			oos.writeObject(doc); // изпращаме на клиента на секреетарката документа за да го удобри
+			Scanner sc = new Scanner(socket.getInputStream());
+			if(sc.nextBoolean()){
+				
+			}else{
+				
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

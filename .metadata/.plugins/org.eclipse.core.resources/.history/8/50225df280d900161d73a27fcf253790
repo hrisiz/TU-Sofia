@@ -1,0 +1,18 @@
+import java.net.Socket;
+
+public class ServerThread extends Thread{
+	private Socket socket;
+	public ServerThread(Socket socket) {
+		this.socket = socket;
+	}
+	
+	private boolean checkUser(String username,String password){
+		return true;
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+}

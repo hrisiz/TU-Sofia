@@ -1,6 +1,0 @@
-
-public class FileSystemException extends Exception{
-	public FileSystemException(String error){
-		super(error);
-	}
-}

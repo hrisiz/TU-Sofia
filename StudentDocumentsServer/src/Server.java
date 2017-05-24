@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.LinkedList;
+
+public class Server {
+	public static LinkedList<Document> documents; // създавам глобални за всички нишки масиви
+	public static LinkedList<Document> acceptedDocuments;
+	public static LinkedList<Document> deniedDocuments;
+	public static void main(String[] args) {
+		documents = new LinkedList<Document>(); // създавам инстанции за промнеливите
+		acceptedDocuments = new LinkedList<Document>();
+		deniedDocuments = new LinkedList<Document>();
+		try {
+			ServerSocket ss = new ServerSocket(1211);  // отварям сокета(порта) на сървъра
+			Socket socket = null; // създавам променливата socket
+			while(true){ // въртим безкраен цикъл за сървъра
+				socket = ss.accept(); // чакам връзка от клиента на дадения сокет(порт).
+				new ServerThread(socket).start(); // след като се е свързал клиент създавам нишка за него и я стартирам
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

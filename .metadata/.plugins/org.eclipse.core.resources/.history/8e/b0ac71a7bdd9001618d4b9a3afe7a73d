@@ -1,0 +1,10 @@
+package test;
+
+public class Main {
+	public static void main(String[] args) {
+
+		if(EnumTest.Test1 == EnumTest.Test2){
+			System.out.println("xaxa");
+		}
+	}
+}

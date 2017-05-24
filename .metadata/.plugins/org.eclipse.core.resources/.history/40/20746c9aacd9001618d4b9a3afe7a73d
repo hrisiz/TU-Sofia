@@ -1,0 +1,16 @@
+
+public class Document {
+	private String name;
+	private float progress;
+	private double income;
+	private String faculty;
+	private DocumentType type;
+	public Document(String name,float progress,double income,String faculty,DocumentType type) {
+		this.name = name;
+		this.progress = progress;
+		this.income = income;
+		this.faculty = faculty;
+		this.type = type;
+	}
+	
+}

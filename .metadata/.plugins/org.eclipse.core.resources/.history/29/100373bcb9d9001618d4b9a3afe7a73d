@@ -1,0 +1,15 @@
+import java.io.BufferedWriter;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class SecretaryClient {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("UserName:");
+		String name = sc.nextLine();
+		System.out.println("Password:");
+		String passowrd = sc.nextLine();
+		Socket soket = new Socket("localhost",1211);
+		BufferedWriter bw = new BufferedWriter(new )
+	}
+}

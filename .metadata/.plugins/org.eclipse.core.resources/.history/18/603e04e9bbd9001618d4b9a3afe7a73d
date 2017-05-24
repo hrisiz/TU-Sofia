@@ -1,0 +1,17 @@
+//създавам клас както е даден по условие с дадени променливи
+public class Document {
+	private String name;
+	private float progress;
+	private double income;
+	private String faculty;
+	private DocumentType type; // съзадавам променлива за типът на документа.
+	public Document(String name,float progress,double income,String faculty,DocumentType type) {
+		//правя си конструктор, който създава документ по подадени параметри.
+		this.name = name;
+		this.progress = progress;
+		this.income = income;
+		this.faculty = faculty;
+		this.type = type;
+	}
+	
+}

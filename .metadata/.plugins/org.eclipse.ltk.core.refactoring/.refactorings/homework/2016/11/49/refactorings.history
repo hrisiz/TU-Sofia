@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 7 elements to &apos;gabyhomework/src&apos;&#x0D;&#x0A;- Original project: &apos;homework&apos;&#x0D;&#x0A;- Destination element: &apos;gabyhomework/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     NameComporator.java&#x0D;&#x0A;     WrongNameException.java&#x0D;&#x0A;     SaveInFile.java&#x0D;&#x0A;     Test.java&#x0D;&#x0A;     Student.java&#x0D;&#x0A;     Validator.java&#x0D;&#x0A;     ReadFromFile.java" description="Copy files" destination="=gabyhomework/src" element1="NameComporator.java" element2="WrongNameException.java" element3="SaveInFile.java" element4="Test.java" element5="Student.java" element6="Validator.java" element7="ReadFromFile.java" files="7" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1480531252281" units="0" version="1.0"/>
+</session>

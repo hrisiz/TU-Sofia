@@ -1,0 +1,8 @@
+public class Maina {
+	public static void main(String[] args) {
+		boolean x=true;
+		if(x = false) {
+		
+		}
+	}
+}

@@ -1,0 +1,15 @@
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class Server {
+	public static void main(String[] args) {
+		try {
+			ServerSocket ss = new ServerSocket(1211);
+			Scoket s = ss.accept();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}
