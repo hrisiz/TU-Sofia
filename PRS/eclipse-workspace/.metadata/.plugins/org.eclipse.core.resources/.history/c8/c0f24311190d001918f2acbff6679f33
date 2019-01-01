@@ -1,0 +1,9 @@
+package plugin.gitlab.views;
+
+import org.eclipse.swt.widgets.*;
+
+import org.eclipse.ui.part.ViewPart;
+
+public class GroupView implements IViewPart {
+
+}

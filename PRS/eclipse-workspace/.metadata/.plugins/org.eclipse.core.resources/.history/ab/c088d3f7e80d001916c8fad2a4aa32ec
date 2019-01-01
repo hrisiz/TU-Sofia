@@ -1,0 +1,6 @@
+package plugin.gitlab.api;
+
+public class GitLabApi {
+	static String token = "y7xNYp1yaW5Xs3vrc8hp";
+	
+}

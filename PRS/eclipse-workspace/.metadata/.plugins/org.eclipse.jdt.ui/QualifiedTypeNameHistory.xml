@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.eclipse.ui.PerspectiveAdapter"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.IPerspectiveFactory"/>
+<fullyQualifiedTypeName name="java.awt.Label"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.IViewPart"/>
+<fullyQualifiedTypeName name="plugin.gitlab.perspective.PerspectiveFactory"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.part.ViewPart"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.internal.ViewSite"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.browser.IWebBrowser"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.PlatformUI"/>
+<fullyQualifiedTypeName name="org.eclipse.help.ui.internal.browser.embedded.EmbeddedBrowser"/>
+<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="org.eclipse.json.provisonnal.com.eclipsesource.json.JsonObject"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.json.JSONArray"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="plugin.gitlab.api.GitLabApi"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Button"/>
+<fullyQualifiedTypeName name="javax.swing.JMenu"/>
+<fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
+<fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
+</qualifiedTypeNameHistroy>

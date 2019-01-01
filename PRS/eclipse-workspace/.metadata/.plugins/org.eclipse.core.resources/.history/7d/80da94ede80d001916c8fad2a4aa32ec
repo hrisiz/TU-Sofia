@@ -1,0 +1,5 @@
+package plugin.gitlab.api;
+
+public class GitLabApi {
+
+}

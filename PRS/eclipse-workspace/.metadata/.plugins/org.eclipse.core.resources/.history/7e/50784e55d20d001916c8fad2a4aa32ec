@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="plugin.gitlab.perspective.PerspectiveFactory"
+            id="plugin.gitlab.perspective"
+            name="GitLab">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="plugin.gitlab.perspective">
+		 <view
+			id="plugin.gitlab.views.gitlabview"
+			minimized="false"
+			moveable="false"
+			ratio="0.5"
+			relationship="left"
+			relative="org.eclipse.ui.console.ConsoleView"
+			visible="true">
+		</view>
+		 
+		<view
+			id="org.eclipse.ui.console.ConsoleView"
+			minimized="false"
+			moveable="false"
+			ratio="0.5"
+			relationship="bottom"
+			relative="org.eclipse.ui.browser.view"
+			visible="true">
+		</view>
+  <view
+        id="org.eclipse.ui.browser.view"
+        minimized="false"
+        ratio="0.5"
+        relationship="right"
+        relative="plugin.gitlab.views.GitLabView1">
+  </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         id="GitLab"
+         name="GitLab"
+         point="org.eclipse.ui.views">
+      <view
+            class="plugin.gitlab.views.GitLabView"
+            id="plugin.gitlab.views.gitlabview"
+            name="GitLabView"
+            restorable="true">
+      </view>
+   </extension>
+   
+
+</plugin>

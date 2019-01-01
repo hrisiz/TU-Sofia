@@ -1,0 +1,7 @@
+package plugin.gitlab.perspective;
+
+import org.eclipse.ui.PerspectiveAdapter;
+
+public class PerspectiveFactory extends PerspectiveAdapter {
+
+}

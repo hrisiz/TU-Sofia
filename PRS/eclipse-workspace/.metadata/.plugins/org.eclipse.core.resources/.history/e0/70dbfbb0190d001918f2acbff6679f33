@@ -1,0 +1,5 @@
+package plugin.gitlab.perspective;
+
+public class LabelView {
+
+}

@@ -1,0 +1,5 @@
+package plugin.gitlab.views;
+
+public class GroupView {
+
+}

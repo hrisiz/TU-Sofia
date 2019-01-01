@@ -1,0 +1,7 @@
+package plugin.gitlab.views;
+
+import org.eclipse.ui.part.ViewPart;
+
+public class GroupView extends ViewPart {
+
+}

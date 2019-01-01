@@ -1,0 +1,38 @@
+package plugin.gitlab.api;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+
+public class GitLabApi {
+	static String token = "y7xNYp1yaW5Xs3vrc8hp";
+	
+	public String GitLabGetRequest(String urlString)
+    {
+    	URL url;
+	    HttpURLConnection con;
+		try {
+			url = new URL(urlString);
+			con = (HttpURLConnection) url.openConnection();
+		    con.setRequestProperty("PRIVATE-TOKEN", token);
+			con.setRequestMethod("GET");
+		    BufferedReader in = new BufferedReader(
+	  		  new InputStreamReader(con.getInputStream()));
+	  		String inputLine;
+	  		StringBuffer content = new StringBuffer();
+	  		while ((inputLine = in.readLine()) != null) {
+	  		    content.append(inputLine);
+	  		}
+	  		in.close();
+	  		con.disconnect();
+	  		return content.toString();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+}
