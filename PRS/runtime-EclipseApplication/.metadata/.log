@@ -1080,3 +1080,23 @@ Command-line arguments:  -product org.eclipse.platform.ide -data /home/hzarkov/D
 
 !ENTRY org.eclipse.ui 4 4 2019-01-02 04:55:39.504
 !MESSAGE Referenced part does not exist yet: plugin.gitlab.views.information.
+!SESSION 2019-01-02 06:17:33.073 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /home/hzarkov/Desktop/TU-Sofia/PRS/eclipse-workspace/../runtime-EclipseApplication -dev file:/home/hzarkov/Desktop/TU-Sofia/PRS/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.ui 4 4 2019-01-02 06:17:44.919
+!MESSAGE Referenced part does not exist yet: plugin.gitlab.views.information.
+!SESSION 2019-01-02 06:22:12.193 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /home/hzarkov/Desktop/TU-Sofia/PRS/eclipse-workspace/../runtime-EclipseApplication -dev file:/home/hzarkov/Desktop/TU-Sofia/PRS/eclipse-workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.ui 4 4 2019-01-02 06:22:28.972
+!MESSAGE Referenced part does not exist yet: plugin.gitlab.views.information.

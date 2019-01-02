@@ -46,7 +46,7 @@
             restorable="true">
       </view>
       <view
-            class="plugin.gitlab.views.Information"
+            class="plugin.gitlab.views.Members"
             id="plugin.gitlab.views.information"
             name="Information"
             restorable="true">
