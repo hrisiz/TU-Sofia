@@ -1,0 +1,65 @@
+package plugin.gitlab.views;
+
+import java.io.IOException;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.widgets.*;
+import org.eclipse.ui.part.ViewPart;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import plugin.gitlab.api.GitLabApi;
+
+public class GitLabView extends ViewPart {
+	private Tree groupsTree;
+    private GitLabApi gitLabAPI = new GitLabApi();
+    public GitLabView() {
+        super();
+    }
+    
+	public void createPartControl(Composite parent) {
+		groupsTree = new Tree(parent, SWT.VERTICAL);
+		groupsTree.addSelectionListener(new SelectionListener() {
+			
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				
+			}
+			
+			@Override
+			public void widgetDefaultSelected(SelectionEvent e) {
+				System.out.print("widgetDefaultSelected: ");
+				System.out.println(e);
+			}
+		});
+		try {
+			JSONArray jsonGroupsArray = new JSONArray(gitLabAPI.GitLabGetRequest("https://gitlab.com/api/v4/groups"));
+			for(Object group_o : jsonGroupsArray )
+			{
+				JSONObject groupJson = (JSONObject) group_o;
+				TreeItem groupsTreeItem = new TreeItem(groupsTree, style);
+				groupsTree.add(groupJson.getString("name") + " " + groupJson.getString("web_url"));
+				
+				JSONArray jsonProjectsArray = new JSONArray(gitLabAPI.GitLabGetRequest("https://gitlab.com/api/v4/groups/" + groupJson.getInt("id") + "/projects"));
+				for(Object project_o : jsonProjectsArray )
+				{
+					JSONObject project = (JSONObject) project_o;
+					//label_text += "- \t" + project.getString("name") + " " + project.getString("web_url") + "\n";
+				}
+			}
+			//label.setText(label_text);
+		} catch (JSONException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+		
+	}
+}

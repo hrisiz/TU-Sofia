@@ -1,0 +1,50 @@
+package plugin.gitlab.views;
+
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.part.ViewPart;
+
+import plugin.gitlab.views.UserGroups.ItemType;
+
+public class Information extends ViewPart implements SelectionListener {
+
+	Label label;
+	public Information()
+	{
+		super();
+	}
+	
+	@Override
+	public void createPartControl(Composite parent) {
+		label = new Label(parent,0);
+		label.setText("Main");
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void widgetSelected(SelectionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void widgetDefaultSelected(SelectionEvent e) {
+		switch((ItemType) e.item.getData("type"))
+		{
+			case GROUP:
+				onGroupClick((int)e.item.getData("id"));
+				break;
+			case PROJECT:
+				onProjectClick((int)e.item.getData("id"));
+				break;
+		}
+	}
+
+}

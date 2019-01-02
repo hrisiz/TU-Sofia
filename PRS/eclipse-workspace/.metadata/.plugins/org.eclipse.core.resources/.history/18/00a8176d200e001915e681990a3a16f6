@@ -1,0 +1,43 @@
+package plugin.gitlab.views;
+
+import java.util.Map;
+
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.ISourceProviderListener;
+import org.eclipse.ui.part.ViewPart;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.FrameworkUtil;
+
+public class Information extends ViewPart implements ISourceProviderListener{
+
+	public Information()
+	{
+		super();
+	}
+	
+	@Override
+	public void createPartControl(Composite parent) {
+		Label label = new Label(parent,0);
+		label.setText("Main");
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sourceChanged(int sourcePriority, Map sourceValuesByName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sourceChanged(int sourcePriority, String sourceName, Object sourceValue) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -8,34 +8,42 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class GitLabApi {
-	static String token = "y7xNYp1yaW5Xs3vrc8hp";
+	private String token = "y7xNYp1yaW5Xs3vrc8hp";
 	
-	public String GitLabGetRequest(String urlString)
+	public String GitLabGetRequest(String urlString) throws IOException, MalformedURLException
     {
-    	URL url;
-	    HttpURLConnection con;
-		try {
-			url = new URL(urlString);
-			con = (HttpURLConnection) url.openConnection();
-		    con.setRequestProperty("PRIVATE-TOKEN", token);
-			con.setRequestMethod("GET");
-		    BufferedReader in = new BufferedReader(
-	  		  new InputStreamReader(con.getInputStream()));
-	  		String inputLine;
-	  		StringBuffer content = new StringBuffer();
-	  		while ((inputLine = in.readLine()) != null) {
-	  		    content.append(inputLine);
-	  		}
-	  		in.close();
-	  		con.disconnect();
-	  		return content.toString();
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return "";
+    	URL url = new URL(urlString);
+		HttpURLConnection con = (HttpURLConnection) url.openConnection();
+	    con.setRequestProperty("PRIVATE-TOKEN", token);
+		con.setRequestMethod("GET");
+	    BufferedReader in = new BufferedReader(
+  		  new InputStreamReader(con.getInputStream()));
+  		String inputLine;
+  		StringBuffer content = new StringBuffer();
+  		while ((inputLine = in.readLine()) != null) {
+  		    content.append(inputLine);
+  		}
+  		in.close();
+  		con.disconnect();
+  		return content.toString();
     }
+	
+	public String GitLabPostRequest(String urlString) throws IOException, MalformedURLException
+	{
+    	URL url = new URL(urlString);
+		HttpURLConnection con = (HttpURLConnection) url.openConnection();
+	    con.setRequestProperty("PRIVATE-TOKEN", token);
+		con.setRequestMethod("POST");
+	    BufferedReader in = new BufferedReader(
+  		  new InputStreamReader(con.getInputStream()));
+  		String inputLine;
+  		StringBuffer content = new StringBuffer();
+  		while ((inputLine = in.readLine()) != null) {
+  		    content.append(inputLine);
+  		}
+  		in.close();
+  		con.disconnect();
+  		return content.toString();
+	    
+	}
 }

@@ -15,23 +15,23 @@
       <perspectiveExtension
             targetID="plugin.gitlab.perspective">
 		 <view
-			id="plugin.gitlab.views.gitlabview"
+			id="plugin.gitlab.views.usergroups"
 			minimized="false"
 			moveable="false"
 			ratio="0.5"
 			relationship="left"
-			relative="org.eclipse.ui.browser.view"
+			relative="plugin.gitlab.views.information"
 			visible="true">
 		</view>
 		 
-  <view
-        id="org.eclipse.ui.browser.view"
-        minimized="false"
-        ratio="0.5"
-        relationship="right"
-        relative="plugin.gitlab.views.gitlabview"
-        visible="true">
-  </view>
+  		<view
+	        id="plugin.gitlab.views.information"
+	        minimized="false"
+	        ratio="0.5"
+	        relationship="right"
+	        relative="plugin.gitlab.views.usergroups"
+	        visible="true">
+  		</view>
       </perspectiveExtension>
    </extension>
    <extension
@@ -40,9 +40,15 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="false"
-            class="plugin.gitlab.views.GitLabView"
-            id="plugin.gitlab.views.gitlabview"
+            class="plugin.gitlab.views.UserGroups"
+            id="plugin.gitlab.views.usergroups"
             name="GitLabView"
+            restorable="true">
+      </view>
+      <view
+            class="plugin.gitlab.views.Information"
+            id="plugin.gitlab.views.information"
+            name="Information"
             restorable="true">
       </view>
    </extension>

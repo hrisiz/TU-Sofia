@@ -1,0 +1,62 @@
+package plugin.gitlab.views;
+
+import java.util.Map;
+
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.ISourceProviderListener;
+import org.eclipse.ui.part.ViewPart;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.FrameworkUtil;
+
+public class Information extends ViewPart implements ISourceProviderListener{
+
+	public Information()
+	{
+		super();
+		BundleContext ctx = FrameworkUtil.getBundle(ReceiverView.class).getBundleContext();
+		EventHandler handler = new EventHandler() {
+			public void handleEvent(final Event event) {
+				if( parent.getDisplay().getThread() == Thread.currentThread() ) {
+					viewer.add(event.getProperty("DATA"));
+				} else {
+					parent.getDisplay().syncExec(new Runnable() {
+						public void run() {
+							viewer.add(event.getProperty("DATA"));
+						}
+					});
+				}
+			}
+		};
+		 
+		Dictionary<String,String> properties = new Hashtable<String, String>();
+		properties.put(EventConstants.EVENT_TOPIC, "viewcommunication/*");
+		ctx.registerService(EventHandler.class, handler, properties);
+
+	}
+	
+	@Override
+	public void createPartControl(Composite parent) {
+		Label label = new Label(parent,0);
+		label.setText("Main");
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sourceChanged(int sourcePriority, Map sourceValuesByName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sourceChanged(int sourcePriority, String sourceName, Object sourceValue) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

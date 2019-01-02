@@ -1,0 +1,25 @@
+package plugin.gitlab.views;
+
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.part.ViewPart;
+
+public class Main extends ViewPart {
+
+	Main()
+	{
+		super();
+	}
+	@Override
+	public void createPartControl(Composite parent) {
+		Label label = new Label(parent);
+		
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

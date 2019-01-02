@@ -1,0 +1,47 @@
+package plugin.gitlab.views;
+
+import java.io.IOException;
+
+import org.eclipse.swt.widgets.*;
+import org.eclipse.ui.part.ViewPart;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import plugin.gitlab.api.GitLabApi;
+
+public class GitLabView extends ViewPart {
+    private java.util.List<Label> label;
+    private GitLabApi gitLabAPI = new GitLabApi();
+    public GitLabView() {
+        super();
+    }
+    
+	public void createPartControl(Composite parent) {
+		String label_text = new String();
+		try {
+			JSONArray jsonGroupsArray = new JSONArray(gitLabAPI.GitLabGetRequest("https://gitlab.com/api/v4/groups"));
+			for(Object group_o : jsonGroupsArray )
+			{
+				JSONObject group = (JSONObject) group_o;
+				label_text += group.getString("name") + " " + group.getString("web_url") + "\n";
+				JSONArray jsonProjectsArray = new JSONArray(gitLabAPI.GitLabGetRequest("https://gitlab.com/api/v4/groups/" + group.getInt("id") + "/projects"));
+				for(Object project_o : jsonProjectsArray )
+				{
+					JSONObject project = (JSONObject) project_o;
+					label_text += "- \t" + project.getString("name") + " " + project.getString("web_url") + "\n";
+				}
+			}
+			label.setText(label_text);
+		} catch (JSONException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+		
+	}
+}
