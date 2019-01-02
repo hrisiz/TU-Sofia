@@ -1,0 +1,45 @@
+package plugin.gitlab.handlers;
+
+import java.io.IOException;
+
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.handlers.HandlerUtil;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import plugin.gitlab.api.GitLabApi;
+
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.swt.widgets.Label;
+
+public class GroupPickHandler extends AbstractHandler {
+	
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
+		try {
+			JSONArray jsonMembersArray = 
+					new JSONArray(GitLabApi.GitLabGetRequest("https://gitlab.com/api/v4/groups/" + event.getParameter("id") + "/members"));
+			
+			for(Object member_o : jsonMembersArray)
+			{
+				JSONObject member = (JSONObject) member_o;
+				member.get("username");
+				member.get("name")
+				member.get("state")
+			}
+			MessageDialog.openInformation(
+					window.getShell(),
+					"Gitlab",
+					);
+		} catch (JSONException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+}

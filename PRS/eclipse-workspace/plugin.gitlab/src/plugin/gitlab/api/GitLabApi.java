@@ -8,9 +8,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class GitLabApi {
-	private String token = "y7xNYp1yaW5Xs3vrc8hp";
+	static private String token = "y7xNYp1yaW5Xs3vrc8hp";
 	
-	public String GitLabGetRequest(String urlString) throws IOException, MalformedURLException
+	static public String GitLabGetRequest(String urlString) throws IOException, MalformedURLException
     {
     	URL url = new URL(urlString);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -28,7 +28,7 @@ public class GitLabApi {
   		return content.toString();
     }
 	
-	public String GitLabPostRequest(String urlString) throws IOException, MalformedURLException
+	static public String GitLabPostRequest(String urlString) throws IOException, MalformedURLException
 	{
     	URL url = new URL(urlString);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();

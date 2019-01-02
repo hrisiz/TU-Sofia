@@ -1,0 +1,56 @@
+package plugin.gitlab.views;
+
+import org.eclipse.core.commands.Command;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.commands.HandlerEvent;
+import org.eclipse.core.commands.IHandler2;
+import org.eclipse.core.commands.IHandlerListener;
+import org.eclipse.core.commands.common.HandleObject;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.commands.ICommandService;
+import org.eclipse.ui.commands.IHandler;
+import org.eclipse.ui.handlers.IHandlerService;
+import org.eclipse.ui.part.ViewPart;
+
+public class Information extends ViewPart implements IHandlerListener {
+
+	private Label label;
+	public Information()
+	{
+		super();
+	}
+	
+	@Override
+	public void createPartControl(Composite parent) {
+		label = new Label(parent,0);
+		label.setText("Main");
+		IHandlerListener handler = this;
+		Command command = ((IHandler2)getSite().getService(IHandler2.class)).addHandlerListener(handler);
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+
+		Command command;
+		IHandler2 event;
+		IHandlerListener handlerListener = new IHandlerListener() {
+
+			@Override
+			public void handlerChanged(HandlerEvent handlerEvent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		};
+		event.addHandlerListener(handlerListener );
+	}
+
+	@Override
+	public void handlerChanged(HandlerEvent handlerEvent) {
+		String id = event.getParameter("id");
+		System.out.println(id);
+	}
+}

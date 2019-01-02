@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="plugin.gitlab.perspective.PerspectiveFactory"
+            fixed="false"
+            id="plugin.gitlab.perspective"
+            name="GitLab">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="plugin.gitlab.perspective">
+		 <view
+			id="plugin.gitlab.views.usergroups"
+			minimized="false"
+			moveable="false"
+			ratio="0.5"
+			relationship="left"
+			relative="plugin.gitlab.views.information"
+			visible="true">
+		</view>
+		 
+  		<view
+	        id="plugin.gitlab.views.information"
+	        minimized="false"
+	        ratio="0.5"
+	        relationship="right"
+	        relative="plugin.gitlab.views.usergroups"
+	        visible="true">
+  		</view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         id="GitLab"
+         name="GitLab"
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="plugin.gitlab.views.UserGroups"
+            id="plugin.gitlab.views.usergroups"
+            name="GitLabView"
+            restorable="true">
+      </view>
+      <view
+            class="plugin.gitlab.views.Information"
+            id="plugin.gitlab.views.information"
+            name="Information"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="plugin.gitlab.commands.category"
+            name="GitLab Category">
+      </category>
+      <command
+            categoryId="plugin.gitlab.commands.category"
+            id="plugin.gitlab.commands.groupPickCommand"
+            name="Group Pick Command">
+         <commandParameter
+               id="id"
+               name="id"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="plugin.gitlab.commands.category"
+            id="plugin.gitlab.commands.ProjectPickCommand"
+            name="Project Pick Command">
+         <commandParameter
+               id="id"
+               name="id"
+               optional="true">
+         </commandParameter>
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="plugin.gitlab.handlers.GroupPickHandler"
+            commandId="plugin.gitlab.commands.groupPickCommand">
+      </handler>
+      <handler
+            class="plugin.gitlab.views.Information"
+            commandId="plugin.gitlab.commands.ProjectPickCommand">
+      </handler>
+   </extension>
+   
+
+</plugin>

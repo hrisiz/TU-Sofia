@@ -52,6 +52,40 @@
             restorable="true">
       </view>
    </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="plugin.gitlab.commands.category"
+            name="GitLab Category">
+      </category>
+      <command
+            categoryId="plugin.gitlab.commands.category"
+            id="plugin.gitlab.commands.groupPickCommand"
+            name="Group Pick Command">
+         <commandParameter
+               id="id"
+               name="id"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="plugin.gitlab.commands.category"
+            id="plugin.gitlab.commands.projectPickCommand"
+            name="Project Pick Command">
+         <commandParameter
+               id="id"
+               name="id"
+               optional="true">
+         </commandParameter>
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="plugin.gitlab.handlers.GroupPickHandler"
+            commandId="plugin.gitlab.commands.groupPickCommand">
+      </handler>
+   </extension>
    
 
 </plugin>

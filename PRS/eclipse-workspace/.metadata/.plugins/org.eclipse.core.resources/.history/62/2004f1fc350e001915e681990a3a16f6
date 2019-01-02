@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="plugin.gitlab.perspective.PerspectiveFactory"
+            fixed="false"
+            id="plugin.gitlab.perspective"
+            name="GitLab">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="plugin.gitlab.perspective">
+		 <view
+			id="plugin.gitlab.views.usergroups"
+			minimized="false"
+			moveable="false"
+			ratio="0.5"
+			relationship="left"
+			relative="plugin.gitlab.views.information"
+			visible="true">
+		</view>
+		 
+  		<view
+	        id="plugin.gitlab.views.information"
+	        minimized="false"
+	        ratio="0.5"
+	        relationship="right"
+	        relative="plugin.gitlab.views.usergroups"
+	        visible="true">
+  		</view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         id="GitLab"
+         name="GitLab"
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="plugin.gitlab.views.UserGroups"
+            id="plugin.gitlab.views.usergroups"
+            name="GitLabView"
+            restorable="true">
+      </view>
+      <view
+            class="plugin.gitlab.views.Information"
+            id="plugin.gitlab.views.information"
+            name="Information"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="plugin.gitlab.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="plugin.gitlab.commands.category"
+            id="plugin.gitlab.commands.groupPickCommand"
+            name="Group Pick Command">
+         <commandParameter
+               id="id"
+               name="id"
+               optional="true">
+         </commandParameter>
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="plugin.gitlab.views.Information"
+            commandId="plugin.gitlab.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="plugin.gitlab.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="plugin.gitlab.commands.sampleCommand"
+                  id="plugin.gitlab.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="plugin.gitlab.toolbars.sampleToolbar">
+            <command
+                  commandId="plugin.gitlab.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  id="plugin.gitlab.toolbars.sampleCommand"
+                  tooltip="Say hello world">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   
+
+</plugin>

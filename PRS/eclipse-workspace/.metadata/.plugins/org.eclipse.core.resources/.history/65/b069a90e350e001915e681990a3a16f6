@@ -1,0 +1,65 @@
+package plugin.gitlab.views;
+
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.commands.IHandlerListener;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.part.ViewPart;
+
+public class Information extends ViewPart implements org.eclipse.core.commands.IHandler2 {
+
+	Label label;
+	public Information()
+	{
+		super();
+	}
+	
+	@Override
+	public void createPartControl(Composite parent) {
+		label = new Label(parent,0);
+		label.setText("Main");
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addHandlerListener(IHandlerListener handlerListener) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		label.setText(event.getParameter("id"));
+		return null;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isHandled() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void removeHandlerListener(IHandlerListener handlerListener) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setEnabled(Object evaluationContext) {
+		// TODO Auto-generated method stub
+		
+	}
+}
