@@ -20,12 +20,12 @@
 			moveable="false"
 			ratio="0.5"
 			relationship="left"
-			relative="plugin.gitlab.views.information"
+			relative="plugin.gitlab.views.milestones"
 			visible="true">
 		</view>
 		 
   		<view
-	        id="plugin.gitlab.views.information"
+	        id="plugin.gitlab.views.milestones"
 	        minimized="false"
 	        ratio="0.5"
 	        relationship="right"
@@ -46,9 +46,9 @@
             restorable="true">
       </view>
       <view
-            class="plugin.gitlab.views.Members"
-            id="plugin.gitlab.views.information"
-            name="Information"
+            class="plugin.gitlab.views.Milestones"
+            id="plugin.gitlab.views.milestones"
+            name="Milestones"
             restorable="true">
       </view>
    </extension>

@@ -22,7 +22,7 @@ public class GroupPickHandler extends AbstractHandler {
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 		try {
 			JSONArray jsonMembersArray = 
-					new JSONArray(GitLabApi.GitLabGetRequest("https://gitlab.com/api/v4/groups/" + event.getParameter("id") + "/members"));
+					new JSONArray(GitLabApi.GitLabGetRequest("/groups/" + event.getParameter("id") + "/members"));
 			StringBuffer information = new StringBuffer("Name\t\tUsername\t\tstate\n");
 			for(Object member_o : jsonMembersArray)
 			{

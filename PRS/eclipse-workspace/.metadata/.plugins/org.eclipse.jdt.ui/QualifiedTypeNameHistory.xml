@@ -18,10 +18,11 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="org.json.JSONArray"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
-<fullyQualifiedTypeName name="plugin.gitlab.api.GitLabApi"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Button"/>
 <fullyQualifiedTypeName name="javax.swing.JMenu"/>
 <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
 <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionListener"/>
+<fullyQualifiedTypeName name="plugin.gitlab.api.GitLabApi"/>
 </qualifiedTypeNameHistroy>

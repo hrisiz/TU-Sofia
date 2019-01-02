@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList/>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_ohSj8g3uEemcqcsEcGLEeQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_o35tIA3uEemcqcsEcGLEeQ" label="%trimmedwindow.label.eclipseSDK" x="730" y="24" width="844" height="1048">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_ohSj8g3uEemcqcsEcGLEeQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_o35tIA3uEemcqcsEcGLEeQ" label="%trimmedwindow.label.eclipseSDK" x="1030" y="24" width="844" height="1016">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -113,7 +113,7 @@
             </children>
           </children>
         </children>
-        <children xsi:type="advanced:Perspective" xmi:id="_qc-0kA3uEemcqcsEcGLEeQ" elementId="plugin.gitlab.perspective" selectedElement="_BA1wgA5GEemEqNhOfBUO6Q" label="GitLab" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/default_persp.png">
+        <children xsi:type="advanced:Perspective" xmi:id="_qc-0kA3uEemcqcsEcGLEeQ" elementId="plugin.gitlab.perspective" selectedElement="_IupuwA5cEem7FZB9P3Bg-Q" label="GitLab" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/default_persp.png">
           <persistedState key="persp.hiddenItems" value="persp.hideToolbarSC:print,persp.hideToolbarSC:org.eclipse.ui.edit.undo,persp.hideToolbarSC:org.eclipse.ui.edit.redo,persp.hideToolbarSC:org.eclipse.ui.edit.text.toggleShowSelectedElementOnly,persp.hideToolbarSC:org.eclipse.debug.ui.commands.RunToLine,persp.hideToolbarSC:org.eclipse.jdt.ui.actions.OpenProjectWizard,"/>
           <tags>persp.actionSet:org.eclipse.mylyn.tasks.ui.navigation</tags>
           <tags>persp.actionSet:org.eclipse.ui.cheatsheets.actionSet</tags>
@@ -124,26 +124,25 @@
           <tags>persp.actionSet:org.eclipse.ui.externaltools.ExternalToolsSet</tags>
           <tags>persp.actionSet:org.eclipse.ui.actionSet.keyBindings</tags>
           <tags>persp.actionSet:org.eclipse.ui.actionSet.openFiles</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_BA1wgA5GEemEqNhOfBUO6Q" selectedElement="_BA1wgQ5GEemEqNhOfBUO6Q" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_BA1wgQ5GEemEqNhOfBUO6Q" containerData="5000" selectedElement="_BA1wgg5GEemEqNhOfBUO6Q" horizontal="true">
-              <children xsi:type="basic:PartStack" xmi:id="_BA1wgg5GEemEqNhOfBUO6Q" elementId="plugin.gitlab.views.usergroupsMStack" containerData="5000" selectedElement="_BA1wgw5GEemEqNhOfBUO6Q">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_IupuwA5cEem7FZB9P3Bg-Q" selectedElement="_IupuwQ5cEem7FZB9P3Bg-Q" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_IupuwQ5cEem7FZB9P3Bg-Q" containerData="5000" selectedElement="_Iupuwg5cEem7FZB9P3Bg-Q" horizontal="true">
+              <children xsi:type="basic:PartStack" xmi:id="_Iupuwg5cEem7FZB9P3Bg-Q" elementId="plugin.gitlab.views.usergroupsMStack" containerData="5000" selectedElement="_Iupuww5cEem7FZB9P3Bg-Q">
                 <tags>active</tags>
                 <tags>noFocus</tags>
-                <children xsi:type="advanced:Placeholder" xmi:id="_BA1wgw5GEemEqNhOfBUO6Q" elementId="plugin.gitlab.views.usergroups" ref="_9LNC4A4dEemKJOxboPKLVQ" closeable="true">
+                <children xsi:type="advanced:Placeholder" xmi:id="_Iupuww5cEem7FZB9P3Bg-Q" elementId="plugin.gitlab.views.usergroups" ref="_9LNC4A4dEemKJOxboPKLVQ" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Other</tags>
-                  <tags>active</tags>
                   <tags>NoMove</tags>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_BA1whA5GEemEqNhOfBUO6Q" elementId="plugin.gitlab.views.informationMStack" containerData="5000" selectedElement="_BA1whQ5GEemEqNhOfBUO6Q">
-                <children xsi:type="advanced:Placeholder" xmi:id="_BA1whQ5GEemEqNhOfBUO6Q" elementId="plugin.gitlab.views.information" ref="_9LR7YA4dEemKJOxboPKLVQ" closeable="true">
+              <children xsi:type="basic:PartStack" xmi:id="_IupuxA5cEem7FZB9P3Bg-Q" elementId="plugin.gitlab.views.milestonesMStack" containerData="5000" selectedElement="_IupuxQ5cEem7FZB9P3Bg-Q">
+                <children xsi:type="advanced:Placeholder" xmi:id="_IupuxQ5cEem7FZB9P3Bg-Q" elementId="plugin.gitlab.views.milestones" ref="_IuTwgA5cEem7FZB9P3Bg-Q" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Other</tags>
                 </children>
               </children>
             </children>
-            <children xsi:type="advanced:Placeholder" xmi:id="_BA1whg5GEemEqNhOfBUO6Q" elementId="org.eclipse.ui.editorss" visible="false" containerData="5000" ref="_pCArYA3uEemcqcsEcGLEeQ">
+            <children xsi:type="advanced:Placeholder" xmi:id="_Iupuxg5cEem7FZB9P3Bg-Q" elementId="org.eclipse.ui.editorss" visible="false" containerData="5000" ref="_pCArYA3uEemcqcsEcGLEeQ">
               <tags>Minimized</tags>
             </children>
           </children>
@@ -188,7 +187,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_pCArYA3uEemcqcsEcGLEeQ" elementId="org.eclipse.ui.editorss">
-      <children xsi:type="basic:PartStack" xmi:id="_pCArYQ3uEemcqcsEcGLEeQ" elementId="PartStack@2ae62bb6">
+      <children xsi:type="basic:PartStack" xmi:id="_pCArYQ3uEemcqcsEcGLEeQ" elementId="PartStack@56b859a6">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
       </children>
@@ -319,11 +318,24 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Other</tags>
+      <tags>active</tags>
       <menus xmi:id="_9WvkgA4dEemKJOxboPKLVQ" elementId="plugin.gitlab.views.information">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
       <toolbar xmi:id="_9WvkgQ4dEemKJOxboPKLVQ" elementId="plugin.gitlab.views.information"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_IuTwgA5cEem7FZB9P3Bg-Q" elementId="plugin.gitlab.views.milestones" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Milestones" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="plugin.gitlab.views.Milestones"/>
+      <persistedState key="originalCompatibilityViewBundle" value="plugin.gitlab"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:Other</tags>
+      <menus xmi:id="_Ivli4A5cEem7FZB9P3Bg-Q" elementId="plugin.gitlab.views.milestones">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_Ivli4Q5cEem7FZB9P3Bg-Q" elementId="plugin.gitlab.views.milestones"/>
     </sharedElements>
     <trimBars xmi:id="_o4EFMA3uEemcqcsEcGLEeQ" elementId="org.eclipse.ui.main.toolbar">
       <children xsi:type="menu:ToolBar" xmi:id="_o57GYA3uEemcqcsEcGLEeQ" elementId="group.file" toBeRendered="false">
@@ -332,7 +344,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_o587kA3uEemcqcsEcGLEeQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_JpiPMA5HEem7Xe8BgRGAAg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_oiAVrQ3uEemcqcsEcGLEeQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-YN_EA5eEemiecoRMaa8-A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_oiAVrQ3uEemcqcsEcGLEeQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_o587kQ3uEemcqcsEcGLEeQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -357,7 +369,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_o5-JsA3uEemcqcsEcGLEeQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_JpmgoA5HEem7Xe8BgRGAAg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_oh_Hvw3uEemcqcsEcGLEeQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-YSQgA5eEemiecoRMaa8-A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_oh_Hvw3uEemcqcsEcGLEeQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_o5-wwA3uEemcqcsEcGLEeQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -397,7 +409,7 @@
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolControl" xmi:id="_BjXOwA5GEemEqNhOfBUO6Q" elementId="org.eclipse.ui.editorss(IDEWindow).(plugin.gitlab.perspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+      <children xsi:type="menu:ToolControl" xmi:id="_JRL0EA5cEem7FZB9P3Bg-Q" elementId="org.eclipse.ui.editorss(IDEWindow).(plugin.gitlab.perspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
@@ -1373,8 +1385,8 @@
     <tags>View</tags>
     <tags>categoryTag:Other</tags>
   </descriptors>
-  <descriptors xmi:id="_69z-QA4dEemKJOxboPKLVQ" elementId="plugin.gitlab.views.information" label="Information" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
-    <persistedState key="originalCompatibilityViewClass" value="plugin.gitlab.views.Members"/>
+  <descriptors xmi:id="_G-1-AA5cEem7FZB9P3Bg-Q" elementId="plugin.gitlab.views.milestones" label="Milestones" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="plugin.gitlab.views.Milestones"/>
     <persistedState key="originalCompatibilityViewBundle" value="plugin.gitlab"/>
     <tags>View</tags>
     <tags>categoryTag:Other</tags>

@@ -74,7 +74,7 @@ public class UserGroups extends ViewPart {
 		mainTree = new Tree(parent, SWT.VERTICAL);
 		mainTree.addSelectionListener(new TreeSelectionListener());
 		try {
-			JSONArray jsonGroupsArray = new JSONArray(GitLabApi.GitLabGetRequest("https://gitlab.com/api/v4/groups"));
+			JSONArray jsonGroupsArray = new JSONArray(GitLabApi.GitLabGetRequest("/groups"));
 			for(Object group_o : jsonGroupsArray )
 			{
 				JSONObject groupJson = (JSONObject) group_o;
@@ -83,7 +83,7 @@ public class UserGroups extends ViewPart {
 				groupTreeItem.setData("type", ItemType.GROUP);
 				groupTreeItem.setText(groupJson.getString("name") + " " + groupJson.getString("web_url"));
 				
-				JSONArray jsonProjectsArray = new JSONArray(GitLabApi.GitLabGetRequest("https://gitlab.com/api/v4/groups/" + groupJson.getInt("id") + "/projects"));
+				JSONArray jsonProjectsArray = new JSONArray(GitLabApi.GitLabGetRequest("/groups/" + groupJson.getInt("id") + "/projects"));
 				for(Object project_o : jsonProjectsArray )
 				{
 					JSONObject projectJson = (JSONObject) project_o;
