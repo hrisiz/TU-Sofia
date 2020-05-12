@@ -1,0 +1,27 @@
+1578312158008	Copy package
+1578312163832	Delete element
+1578312179606	Copy package
+1578312205970	Delete element
+1578312225966	Move compilation unit
+1578312230019	Delete element
+1578314646692	Delete element
+1578314863565	Move compilation unit
+1578314879787	Rename package 'model'
+1578315488806	Delete element
+1578315542474	Delete element
+1578315583319	Rename package 'com.example.demo.model'
+1578316820507	Rename package 'model'
+1578316942882	Delete element
+1578317280715	Move compilation unit
+1578317283743	Move compilation unit
+1578317287371	Move compilation unit
+1578318932997	Move compilation unit
+1578318935689	Move compilation unit
+1578318937860	Move compilation unit
+1578318960051	Delete element
+1578319988495	Delete element
+1578320781242	Delete element
+1578321215241	Delete element
+1578322607630	Rename resource 'greeting.html'
+1578323381267	Rename type 'workDayRepository'
+1578323967966	Encapsulate field 'day'

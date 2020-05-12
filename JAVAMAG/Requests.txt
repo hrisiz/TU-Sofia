@@ -1,0 +1,6 @@
+JSON 
+
+{"day":"2020-01-30","start_time":"13:00:00","end_time":"15:00:00","rest_time":"1:00:00","salery":3}
+
+
+{"username":"Hello","password":"Hello","email":"Hello","name":"Hello","salery":10.1}

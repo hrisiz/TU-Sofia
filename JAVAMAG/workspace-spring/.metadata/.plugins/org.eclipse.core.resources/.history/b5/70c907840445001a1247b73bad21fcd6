@@ -1,0 +1,54 @@
+package com.example.demo.controller;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Iterator;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.demo.model.UserRepository;
+import com.example.demo.model.WorkDay;
+import com.example.demo.model.WorkDayRepository;
+
+@Controller
+@RequestMapping(path="/user/{user_id}")
+public class WorkDayController {
+	@Autowired
+	private WorkDayRepository workDayRepository;
+
+	@PostMapping(value="/addTime")
+	@ResponseBody
+	public Boolean addUser(@PathVariable("user_id") Integer user_id, @RequestBody WorkDay work_day) {
+		if(work_day.getUser_id() == null)
+		{
+			work_day.setUser_id(user_id);
+		}
+	    workDayRepository.save(work_day);
+	    return true;
+	}
+	
+	@GetMapping(value="/getTime/{day}/{month}/{year}")
+	@ResponseBody
+	public WorkDay getUser(@PathVariable("user_id") Integer user_id,
+			@PathVariable("day") Integer day,
+			@PathVariable("month") Integer month,
+			@PathVariable("year") Integer year) {
+		WorkDay result = null;
+		try {
+			Date date = (new SimpleDateFormat("MM-dd-yyyy")).parse(month.toString() + "-" + day.toString() + "-" + year.toString());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    return result;
+	}
+}

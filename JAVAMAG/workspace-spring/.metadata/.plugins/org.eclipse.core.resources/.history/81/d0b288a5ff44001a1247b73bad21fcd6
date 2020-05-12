@@ -1,0 +1,86 @@
+package com.example.demo.controller;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.demo.model.User;
+import com.example.demo.model.UserRepository;
+
+
+@Controller
+@RequestMapping(path="/user")
+public class UserController {
+	
+	@PostMapping(value="/addUser")
+	public User addUser(@RequestBody User input_user) {		
+		System.out.println("Hello\n");
+		User n = null;
+		if(null != input_user.getId())
+		{
+			n = new User();  // GetUser by ID userRepository.getById(input_user.getId())
+			if(null != input_user.getUsername())
+			{
+				n.setUsername(input_user.getUsername());
+			}
+			
+			if(null != input_user.getPassword())
+			{
+				n.setPassword(input_user.getPassword());
+			}
+			
+			if(null != input_user.getName())
+			{
+				n.setName(input_user.getName());
+			}
+			
+			if(null != input_user.getEmail())
+			{
+				n.setEmail(input_user.getEmail());
+			}
+			
+			if(null != input_user.getSalery())
+			{
+				n.setSalery(input_user.getSalery());
+			}
+		}
+		else
+		{
+			n = input_user;
+		}
+
+	    userRepository.save(n);
+		return n;		
+	}
+	
+	@RequestMapping(value="/getUser/{id}", method=RequestMethod.GET)
+	public String addUser(@PathVariable("id") Integer id, Model model) {
+		System.out.println(id);
+		
+		Optional<User> result = userRepository.findById(id);
+		model.addAttribute(result.get());
+		System.out.println(model);
+		if(!result.isPresent())
+		{
+			return null;
+		}		
+		return "user";
+	}
+	
+	@RequestMapping(value="/deleteUser/{id}", method=RequestMethod.DELETE)
+	public void deleteUser(@PathVariable("id") Integer id) {
+		System.out.println("Delete " + id);
+		
+//		Optional<User> result = userRepository.findById(id);
+		userRepository.deleteById(id);
+	}
+	
+}

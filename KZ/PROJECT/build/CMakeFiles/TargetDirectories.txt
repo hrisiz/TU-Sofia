@@ -1,0 +1,3 @@
+/home/hzarkov/Desktop/TU-Sofia/KZ/build/CMakeFiles/rebuild_cache.dir
+/home/hzarkov/Desktop/TU-Sofia/KZ/build/CMakeFiles/edit_cache.dir
+/home/hzarkov/Desktop/TU-Sofia/KZ/build/CMakeFiles/MyCVAlgorithm.dir

@@ -1,0 +1,23 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import model.User;
+
+@Controller
+public class UserController {
+	@RequestMapping(value="/user/addUser", method=RequestMethod.POST, headers = "Accept=application/json")
+	@ResponseBody
+	public User greeting(@ModelAttribute User input) {
+		User user = new User();
+		user.setId(1);
+		user.setName("hello");
+		System.out.println(input);
+		return input;		
+	}
+}

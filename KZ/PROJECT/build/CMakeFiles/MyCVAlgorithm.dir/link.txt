@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/MyCVAlgorithm.dir/src/main.cpp.o  -o MyCVAlgorithm -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc 
